@@ -1,0 +1,227 @@
+/* Google Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg,
+            #4f46e5,
+            #7c3aed,
+            #2563eb,
+            #06b6d4);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .25);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.time {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.colon,
+.dot {
+    opacity: .8;
+}
+
+#milliseconds {
+    font-size: 2rem;
+    color: #ffe082;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.buttons button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    transition: .3s;
+    font-weight: 600;
+    min-width: 140px;
+}
+
+.buttons button i {
+    margin-right: 8px;
+}
+
+.start {
+    background: #10b981;
+}
+
+.stop {
+    background: #ef4444;
+}
+
+.reset {
+    background: #f59e0b;
+}
+
+.lap {
+    background: #3b82f6;
+}
+
+.buttons button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+.laps {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.laps h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#lapList li {
+    background: rgba(255, 255, 255, .12);
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+#lapList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#lapList::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 20px;
+}
+
+.footer {
+    margin-top: 30px;
+    opacity: .8;
+    font-size: 14px;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    font-size: 22px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    transition: .3s;
+}
+
+.theme-btn:hover {
+    transform: rotate(180deg);
+}
+
+.dark {
+    background: linear-gradient(-45deg,
+            #111827,
+            #1e293b,
+            #0f172a,
+            #020617);
+}
+
+.dark .card {
+    background: rgba(0, 0, 0, .35);
+}
+
+.dark .theme-btn {
+    background: #222;
+    color: white;
+}
+
+@media (max-width:768px) {
+
+    .card {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .time {
+        font-size: 2.5rem;
+    }
+
+    #milliseconds {
+        font-size: 1.3rem;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+}

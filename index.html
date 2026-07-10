@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Stopwatch</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="themeBtn" class="theme-btn">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>
+                <i class="fa-solid fa-stopwatch"></i>
+                Stopwatch
+            </h1>
+
+            <!-- Time Display -->
+            <div class="time">
+
+                <span id="hours">00</span>
+                <span class="colon">:</span>
+
+                <span id="minutes">00</span>
+                <span class="colon">:</span>
+
+                <span id="seconds">00</span>
+
+                <span class="dot">.</span>
+
+                <span id="milliseconds">00</span>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <button id="startBtn" class="start">
+                    <i class="fa-solid fa-play"></i>
+                    Start
+                </button>
+
+                <button id="stopBtn" class="stop">
+                    <i class="fa-solid fa-pause"></i>
+                    Stop
+                </button>
+
+                <button id="resetBtn" class="reset">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Reset
+                </button>
+
+                <button id="lapBtn" class="lap">
+                    <i class="fa-solid fa-flag"></i>
+                    Lap
+                </button>
+
+            </div>
+
+            <!-- Lap Records -->
+            <div class="laps">
+
+                <h2>Lap Times</h2>
+
+                <ul id="lapList">
+
+                </ul>
+
+            </div>
+
+            <div class="footer">
+                Made with ❤️ using HTML, CSS & JavaScript
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
